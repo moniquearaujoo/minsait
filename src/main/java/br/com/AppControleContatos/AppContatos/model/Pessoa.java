@@ -2,12 +2,12 @@ package br.com.AppControleContatos.AppContatos.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.Collection;
 import java.util.Objects;
 
-
-@Entity
 @Data
-@Table(name = "pessoas")
+@Entity
 public class Pessoa {
 
     @Id
@@ -46,4 +46,8 @@ public class Pessoa {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    @OneToMany(mappedBy = "pessoa")
+    private Collection<Contato> contato;
+
 }

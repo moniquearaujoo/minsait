@@ -19,10 +19,6 @@ public class PessoaService implements PessoaServiceInterface {
         this.pessoaRepository = pessoaRepository;
     }
 
-    public Pessoa create(Pessoa pessoa) {
-        return pessoaRepository.save(pessoa);
-    }
-
     @Override
     public Pessoa save(Pessoa pessoa) {
         return pessoaRepository.save(pessoa);

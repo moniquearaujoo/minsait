@@ -4,10 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.io.Serializable;
 import java.util.Objects;
-
-@Entity
 @Data
-@Table(name = "Contatos")
+@Entity
 public class Contato implements Serializable {
 
     @Column(nullable = false)

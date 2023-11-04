@@ -30,7 +30,7 @@ public class PessoaResource {
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Pessoa>> getById(@PathVariable Long id){
         Optional<Pessoa> pessoa = pessoaService.getById(id);
-        if(pessoa == null)
+        if(pessoa.isEmpty())
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(pessoa);
     }
